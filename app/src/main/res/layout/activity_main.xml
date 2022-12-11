@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+  <TextView
+      android:id="@+id/tv_musicplayer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="76dp"
+      android:text="Music Player App"
+      android:textColor="@color/white"
+      android:textSize="34sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="44dp"
+      android:src="@drawable/musicplaylist"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_musicplayer" />
+
+  <Button
+      android:id="@+id/play_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="152dp"
+      android:background="@drawable/playarraow"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.321"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+  <Button
+      android:id="@+id/pause_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="17dp"
+      android:background="@drawable/pause_btn"
+      app:layout_constraintBaseline_toBaselineOf="@+id/play_btn"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/play_btn" />
+
+  <Button
+      android:id="@+id/fastforward"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="4dp"
+      android:background="@drawable/fastforward_icon"
+      app:layout_constraintBottom_toBottomOf="@+id/pause_btn"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/pause_btn"
+      app:layout_constraintTop_toBottomOf="@+id/seekbar" />
+
+  <Button
+      android:id="@+id/fastrewined"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:background="@drawable/fastrewind_icon"
+      app:layout_constraintBaseline_toBaselineOf="@+id/play_btn"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <SeekBar
+      android:id="@+id/seekbar"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="497dp"
+      android:layout_marginBottom="35dp"
+
+      app:layout_constraintBottom_toTopOf="@+id/fastforward"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/time_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:text="2:00"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/seekbar" />
+
+  <TextView
+      android:id="@+id/song_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="112dp"
+      android:text="Song Title"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.759"
+      app:layout_constraintStart_toEndOf="@+id/time_text"
+      app:layout_constraintTop_toBottomOf="@+id/seekbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
